@@ -4,3 +4,9 @@ head -c 25MB /dev/urandon > test.file
 dd if=/dev/urandom of=test.file bs=25MB count=1   #if=input file;of=output file; bs=block size; count=被复制的块数
 truncate -s 25M test.file  #-s 指定大小
 ```
+
+### 修改文件拥有者和群组
+``` bash 
+chgrp 群组名 文件名 -R
+chown 用户名 文件名 -R
+```
